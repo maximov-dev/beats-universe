@@ -1,15 +1,22 @@
 import { StatusBar } from 'expo-status-bar';
-import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
+import { Input } from './src/shared/components/input/Input';
+import { Colors } from './src/shared/ui/colors';
+import { Gaps } from './src/shared/ui/gaps';
+import { Button } from './src/shared/components/button/Button';
 
 export default function App() {
   return (
     <View style={styles.container}>
+      <View  style={styles.logoContainer}>
+      <Image style={styles.logo} resizeMode={'contain'} source={require('./assets/logo.png')}/>
+      </View>
       <View style={styles.content}>
-        <Text>Beat Univers</Text>
+        <Text style={styles.appTitle}>Beats Universe</Text>
         <View style={styles.form}>
-          <TextInput style={styles.input}></TextInput>
-          <TextInput style={styles.input}></TextInput>
-          <Button title='Login'/>
+          <Input placeholder={'Enter email'}/>
+          <Input isPassword placeholder={'Enter password'}/>
+          <Button text='Login'/>
         </View>
         <Text>Restore password</Text>
       </View>
@@ -19,19 +26,30 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: Colors.black,
     justifyContent: 'center',
     padding: 55,
     flex: 1,
   },
+  logoContainer: {
+    alignItems: 'center',
+    width: '100%',
+  },
+  logo: {
+    height: 150,
+    width: 150,
+  },
   content: {
     alignItems: 'center',
-    gap: 50,
+    gap: Gaps.gap16,
+  },
+  appTitle: {
+    fontSize: 42,
+    fontWeight: '600',
+    color: Colors.white,
   },
   form: {
     alignSelf: 'stretch',
-    gap: 16
-  },
-  input: {
-    backgroundColor: 'gray'
+    gap: Gaps.gap16
   }
 });
