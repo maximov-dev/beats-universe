@@ -10,7 +10,7 @@ import { Input } from '../src/shared/components/input/Input';
 import { Colors } from '../src/shared/ui/colors';
 import { Gaps } from '../src/shared/ui/gaps';
 
-export default function App() {
+export default function Login() {
 	const [localError, setLocalError] = useState<string>('');
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');

@@ -23,10 +23,12 @@ export const loginAtom = atom(
 			isLoading: true,
 		});
 		try {
-			const { data } = await axios.post<IAuthResponse>(API.login, {
-				email,
-				password,
-			});
+			// const { data } = await axios.post<IAuthResponse>(API.login, {
+			// 	email,
+			// 	password,
+			// });
+			const data = { accessToken: '123' };
+
 			set(authAtom, {
 				...DEFAULT_STATE,
 				accessToken: data.accessToken,

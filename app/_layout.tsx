@@ -1,9 +1,9 @@
-import { SplashScreen, Stack } from 'expo-router';
-import { Colors } from '../src/shared/ui/colors';
-import { StatusBar } from 'expo-status-bar';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { useFonts } from 'expo-font';
+import { SplashScreen, Stack } from 'expo-router';
+import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { Colors } from '../src/shared/ui/colors';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -41,7 +41,7 @@ export default function RootLayout() {
 					},
 				}}
 			>
-				<Stack.Screen name="login" />
+				<Stack.Screen name="index" />
 				<Stack.Screen
 					options={{
 						presentation: 'modal',
