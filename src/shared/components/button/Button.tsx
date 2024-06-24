@@ -71,6 +71,6 @@ const styles = StyleSheet.create({
 		fontSize: Fonts.f18,
 		color: Colors.white,
 		fontWeight: '500',
-		fontFamily: 'Roboto',
+		fontFamily: Fonts.regular,
 	},
 });

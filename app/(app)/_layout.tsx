@@ -4,7 +4,7 @@ import { useAtomValue } from 'jotai';
 import { StyleSheet } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { authAtom } from '../../src/entities/auth/model/auth.state';
-import { AppDrawer } from '../../src/entities/layout/ui/AppDrawer/AppDrawer';
+import { AppDrawer } from '../../src/widgets/layout/AppDrawer/AppDrawer';
 import { MenuButton } from '../../src/features/layout/ui/MenuButton/MenuButton';
 import { Colors } from '../../src/shared/ui/colors';
 import { Fonts } from '../../src/shared/ui/fonts';

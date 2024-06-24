@@ -16,6 +16,6 @@ const styles = StyleSheet.create({
 	link: {
 		fontSize: Fonts.f18,
 		color: Colors.link,
-		fontFamily: 'Roboto',
+		fontFamily: Fonts.regular,
 	},
 });

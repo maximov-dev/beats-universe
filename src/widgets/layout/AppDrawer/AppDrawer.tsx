@@ -3,12 +3,12 @@ import { DrawerContentComponentProps, DrawerContentScrollView } from '@react-nav
 import { useAtom, useSetAtom } from 'jotai';
 import { useEffect } from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
-import { CloseDrawer } from '../../../../features/layout/ui/CloseDrawer/CloseDrawer';
-import { MenuItem } from '../../../../features/layout/ui/MenuItem/MenuItem';
-import { AppLink } from '../../../../shared/components/app-link/AppLink';
-import { Colors } from '../../../../shared/ui/colors';
-import { logoutAtom } from '../../../auth/model/auth.state';
-import { loadProfileAtom } from '../../../user/model/user.state';
+import { CloseDrawer } from '../../../features/layout/ui/CloseDrawer/CloseDrawer';
+import { MenuItem } from '../../../features/layout/ui/MenuItem/MenuItem';
+import { AppLink } from '../../../shared/components/app-link/AppLink';
+import { Colors } from '../../../shared/ui/colors';
+import { logoutAtom } from '../../../entities/auth/model/auth.state';
+import { loadProfileAtom } from '../../../entities/user/model/user.state';
 
 const MENU = [
 	{
@@ -19,7 +19,7 @@ const MENU = [
 	{
 		text: 'Profile',
 		icon: <FontAwesome name="user" size={32} color={Colors.white} />,
-		path: '/',
+		path: 'profile',
 	},
 ];
 
@@ -41,7 +41,7 @@ export const AppDrawer = (props: DrawerContentComponentProps) => {
 					<Image
 						style={styles.logo}
 						resizeMode={'contain'}
-						source={require('../../../../../assets/logo.png')}
+						source={require('../../../../assets/logo.png')}
 					/>
 				</View>
 				<View style={styles.nameContainer}>
