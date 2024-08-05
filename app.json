@@ -34,6 +34,18 @@
         {
           "fonts": ["./assets/fonts/Roboto-Regular.ttf"]
         }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./local/assets/notification-icon.png",
+          "color": "#AA1419",
+          "defaultChannel": "default",
+          "sounds": [
+            "./local/assets/notification-sound.wav",
+            "./local/assets/notification-sound-other.wav"
+          ]
+        }
       ]
     ]
   }
